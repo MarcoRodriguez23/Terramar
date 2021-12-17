@@ -13,55 +13,97 @@ function grafica(){
     const nivel3 = document.querySelector('#nivel_3');
     const nivel4 = document.querySelector('#nivel_4');
     const nivel5 = document.querySelector('#nivel_5');
+    const titulo = document.querySelector('#titulo-niveles');
 
-    const requisitos = document.querySelector('.requisitos');
-    const compensacion = document.querySelector('.compensacion');
-    const premios = document.querySelector('.premios');
-
-    nivel1.onclick = function(){
-        requisitos.innerHTML='<h1>requisitos para nivel 1</h1>';
-        compensacion.innerHTML='<h1>Compensacion para nivel 1</h1>';
-        premios.innerHTML='<h1>premios para nivel 1</h1>';
-
-        requisitos.classList.add('transicion');
+    nivel1.onmouseover = function(){
+        llenarTexto(1);
+    };
+    nivel2.onmouseover = function(){
+        llenarTexto(2);
+    };
+    nivel3.onmouseover = function(){
+        llenarTexto(3);
+    };
+    nivel4.onmouseover = function(){
+        llenarTexto(4);
+    };
+    nivel5.onmouseover = function(){
+        llenarTexto(5);
     };
 
-    nivel2.onclick = function(){
-        requisitos.innerHTML='<h1>requisitos para nivel 2</h1>';
-        compensacion.innerHTML='<h1>Compensacion para nivel 2</h1>';
-        premios.innerHTML='<h1>premios para nivel 2</h1>';
+    nivel1.onmouseout = function(){
+        resetearTexto();
     };
-
-    nivel3.onclick = function(){
-        requisitos.innerHTML='<h1>requisitos para nivel 3</h1>';
-        compensacion.innerHTML='<h1>Compensacion para nivel 3</h1>';
-        premios.innerHTML='<h1>premios para nivel 3</h1>';
+    nivel2.onmouseout = function(){
+        resetearTexto();
     };
-
-    nivel4.onclick = function(){
-        requisitos.innerHTML='<h1>requisitos para nivel 4</h1>';
-        compensacion.innerHTML='<h1>Compensacion para nivel 4</h1>';
-        premios.innerHTML='<h1>premios para nivel 4</h1>';
+    nivel3.onmouseout = function(){
+        resetearTexto();
     };
-
-    nivel5.onclick = function(){
-        requisitos.innerHTML='<h1>requisitos para nivel 5</h1>';
-        compensacion.innerHTML='<h1>Compensacion para nivel 5</h1>';
-        premios.innerHTML='<h1>premios para nivel 5</h1>';
+    nivel4.onmouseout = function(){
+        resetearTexto();
+    };
+    nivel5.onmouseout = function(){
+        resetearTexto();
     };
 }
 
-function draw(){
-    // Creates canvas 320 × 200 at 10, 50
-    var paper = Raphael(10, 50, 700, 400);
+
+function resetearTexto(){
+    const requisitos = document.querySelector('.requisitos');
+    const compensacion = document.querySelector('.compensacion');
+    const premios = document.querySelector('.premios');
+    const titulo = document.querySelector('#titulo-niveles');
+
+    titulo.innerHTML='<h1></h1>';
+    requisitos.innerHTML='<h1></h1>';
+    compensacion.innerHTML='<h1></h1>';
+    premios.innerHTML='<h1></h1>';
+}
+
+function llenarTexto(num){
+    const requisitos = document.querySelector('.requisitos');
+    const compensacion = document.querySelector('.compensacion');
+    const premios = document.querySelector('.premios');
+    const titulo = document.querySelector('#titulo-niveles');
+
+    switch (num) {
+        case 1:
+            titulo.innerHTML='<h1>Nivel 1</h1>';
+            requisitos.innerHTML='<h1>requisitos para nivel 1</h1>';
+            compensacion.innerHTML='<h1>Compensación para nivel 1</h1>';
+            premios.innerHTML='<h1>premios para nivel 1</h1>';
+            break;
+
+        case 2:
+            titulo.innerHTML='<h1>Nivel 2</h1>';
+            requisitos.innerHTML='<h1>requisitos para nivel 2</h1>';
+            compensacion.innerHTML='<h1>Compensación para nivel 2</h1>';
+            premios.innerHTML='<h1>premios para nivel 2</h1>';
+            break;
+
+        case 3:
+            titulo.innerHTML='<h1>Nivel 3</h1>';
+            requisitos.innerHTML='<h1>requisitos para nivel 3</h1>';
+            compensacion.innerHTML='<h1>Compensación para nivel 3</h1>';
+            premios.innerHTML='<h1>premios para nivel 3</h1>';
+            break;
+
+        case 4:
+            titulo.innerHTML='<h1>Nivel 4</h1>';
+            requisitos.innerHTML='<h1>requisitos para nivel 4</h1>';
+            compensacion.innerHTML='<h1>Compensación para nivel 4</h1>';
+            premios.innerHTML='<h1>premios para nivel 4</h1>';
+            break;
+
+        case 5:
+            titulo.innerHTML='<h1>Nivel 5</h1>';
+            requisitos.innerHTML='<h1>requisitos para nivel 5</h1>';
+            compensacion.innerHTML='<h1>Compensación para nivel 5</h1>';
+            premios.innerHTML='<h1>premios para nivel 5</h1>';
+            break;
     
-    var circulos = [];
-    circulos[0] = paper.circle(50,40,80);
-    circulos[0].attr("fill", "red");
-    circulos[0].attr("stroke","red");
-
-    circulos[1] = paper.circle(50,40,40);
-    circulos[1].attr("fill", "blue");
-    circulos[1].attr("stroke","blue");
-
+        default:
+            break;
+    }
 }
