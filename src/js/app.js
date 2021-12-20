@@ -55,7 +55,16 @@ function resetearTexto(){
     const premios = document.querySelector('.premios');
     const titulo = document.querySelector('#titulo-niveles');
 
-    titulo.innerHTML='<h1></h1>';
+    requisitos.classList.remove('animate__animated');
+    requisitos.classList.remove('animate__zoomInRight');
+    compensacion.classList.remove('animate__animated');
+    compensacion.classList.remove('animate__zoomInRight');
+    premios.classList.remove('animate__animated');
+    premios.classList.remove('animate__zoomInRight');
+    titulo.classList.remove('animate__animated');
+    titulo.classList.remove('animate__zoomInRight');
+
+    titulo.innerHTML='';
     requisitos.innerHTML='<h1></h1>';
     compensacion.innerHTML='<h1></h1>';
     premios.innerHTML='<h1></h1>';
@@ -67,37 +76,46 @@ function llenarTexto(num){
     const premios = document.querySelector('.premios');
     const titulo = document.querySelector('#titulo-niveles');
 
+    requisitos.classList.add('animate__animated');
+    requisitos.classList.add('animate__zoomInRight');
+    compensacion.classList.add('animate__animated');
+    compensacion.classList.add('animate__zoomInRight');
+    premios.classList.add('animate__animated');
+    premios.classList.add('animate__zoomInRight');
+    titulo.classList.add('animate__animated');
+    titulo.classList.add('animate__zoomInRight');
+
     switch (num) {
         case 1:
-            titulo.innerHTML='<h1>Nivel 1</h1>';
+            titulo.innerHTML='Nivel 1';
             requisitos.innerHTML='<h1>requisitos para nivel 1</h1>';
             compensacion.innerHTML='<h1>Compensación para nivel 1</h1>';
             premios.innerHTML='<h1>premios para nivel 1</h1>';
             break;
 
         case 2:
-            titulo.innerHTML='<h1>Nivel 2</h1>';
+            titulo.innerHTML='Nivel 2';
             requisitos.innerHTML='<h1>requisitos para nivel 2</h1>';
             compensacion.innerHTML='<h1>Compensación para nivel 2</h1>';
             premios.innerHTML='<h1>premios para nivel 2</h1>';
             break;
 
         case 3:
-            titulo.innerHTML='<h1>Nivel 3</h1>';
+            titulo.innerHTML='Nivel 3';
             requisitos.innerHTML='<h1>requisitos para nivel 3</h1>';
             compensacion.innerHTML='<h1>Compensación para nivel 3</h1>';
             premios.innerHTML='<h1>premios para nivel 3</h1>';
             break;
 
         case 4:
-            titulo.innerHTML='<h1>Nivel 4</h1>';
+            titulo.innerHTML='Nivel 4';
             requisitos.innerHTML='<h1>requisitos para nivel 4</h1>';
             compensacion.innerHTML='<h1>Compensación para nivel 4</h1>';
             premios.innerHTML='<h1>premios para nivel 4</h1>';
             break;
 
         case 5:
-            titulo.innerHTML='<h1>Nivel 5</h1>';
+            titulo.innerHTML='Nivel 5';
             requisitos.innerHTML='<h1>requisitos para nivel 5</h1>';
             compensacion.innerHTML='<h1>Compensación para nivel 5</h1>';
             premios.innerHTML='<h1>premios para nivel 5</h1>';

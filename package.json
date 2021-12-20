@@ -42,5 +42,8 @@
     "gulp-webp": "^4.0.1",
     "sass": "^1.45.0",
     "terser": "^5.10.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
   }
 }
