@@ -9,27 +9,58 @@
     <title>Terramar</title>
 </head>
 <body>
+    <header>
+        <h1>Requisitos, compensaciones y promociones por nivel Terramar</h1>
+        <p class="contenedor contenido-centrado">
+            En cada nivel de terramar se obtienen ciertos beneficios pero para poder acceder a los mismos se requiere cumplir con requisitos bases, los cuales dependen de la categoría en la que se encuentra cada afiliada.
+        </p>
+        <h4>Niveles Terramar</h4>
+        <div class="botones-opciones contenedor contenido-centrado">
+            <button class="nivel" id="nivel_1">nivel 1</button>
+            <button class="nivel" id="nivel_2">nivel 2</button>
+            <button class="nivel" id="nivel_3">nivel 3</button>
+            <button class="nivel" id="nivel_4">nivel 4</button>
+            <button class="nivel" id="nivel_5">nivel 5</button>
+            <button class="nivel" id="nivel_6">nivel 6</button>
+            <button class="nivel" id="nivel_7">nivel 7</button>
+            <button class="nivel" id="nivel_8">nivel 8</button>
+            <button class="nivel" id="nivel_9">nivel 9</button>
+            <button class="nivel" id="nivel_10">nivel 10</button>
+        </div>
+    </header>
     <main>
-        <div class="grafica contenedor">
-            
-            <div class="grafica-ilustracion">
-                <button class="nivel" id="nivel_5"></button>
-                <button class="nivel" id="nivel_4"></button>
-                <button class="nivel" id="nivel_3"></button>
-                <button class="nivel" id="nivel_2"></button>
-                <button class="nivel" id="nivel_1"></button>
-            </div>
-            <div class="texto-grafica">
-                <h1 class="animate__animated animate__bounceInDown ">Conoce los niveles de socios</h1>
-                <h2 id="titulo-niveles"></h2>
-                <div class="requisitos">
-                </div>
-                <div class="compensacion">
-                </div>
-                <div class="premios">
-                </div>
-                
-            </div>
+        <h2 id="nivel">Nivel</h2>
+        <h3 id="titulo-nivel">Titulo del nivel</h3>
+        <div class="descripciones contenedor" id="requisitos">
+            <h4>Requisitos de mantenimiento mensual</h4>
+            <p>No. de GDA con base mensual</p>
+            <p>No. de Ca en GC mensual</p>
+            <p>Módulos mensuales requeridos</p>
+            <p>No. de consultoras ordenando en GC</p>
+            <p>No. de consultoras patrocinando</p>
+            <p id="req_1"></p>
+            <p id="req_2"></p>
+            <p id="req_3"></p>
+            <p id="req_4"></p>
+            <p id="req_5"></p>
+        </div>
+
+        <div class="descripciones contenedor" id="compensaciones">
+            <h4>Compensación</h4>
+            <p>Grupo central</p>
+            <p>Grupo directo 1ra línea</p>
+            <p>Grupo directo 2ra línea</p>
+            <p>Grupo directo 3ra línea</p>
+            <p id="comp_1"></p>
+            <p id="comp_2"></p>
+            <p id="comp_3"></p>
+            <p id="comp_4"></p>
+        </div>
+
+        <div>
+            <h4>Requisitos de mantenimiento mensual</h4>
+            <p>No. de GDA con base mensual</p>
+            <p id="premios"></p>
         </div>
     </main>
     <script src="build/js/bundle.js"></script>

@@ -1,76 +1,50 @@
-.grafica{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @include tablet{
-        flex-direction: row;
-    }
-    .grafica-ilustracion{
-        display: flex;
-        margin:auto 0;
-        align-items: center;
-        justify-content: center;
-        // border: 1px solid black;
-        width: 50%;
-        position: relative;
-        button {
-            position: absolute;
-            -moz-border-radius: 50%;
-            -webkit-border-radius: 50%;
-            border-radius: 50%;
-            border: none;
-            // background: #5cb85c;
-            transition: all 550ms ease;
-            &:hover{ 
-                cursor: pointer;
-                transform: scale(1.1);
-            }
-       }
-        
-        #nivel_1{
-            width: 30%;
-            height: 30%;
-            background-color: yellow;
+.botones-opciones{
     
-        }
-        #nivel_2{
-            width: 45%;
-            height: 45%;
-            background-color: blue;
-        }
-        #nivel_3{
-            width: 60%;
-            height: 60%;
-            background-color: red;
-        }
-        #nivel_4{
-            width: 75%;
-            height: 75%;
-            background-color: green;
-        }
-        #nivel_5{
-            width: 90%;
-            height: 90%;
-            background-color: orange;
-    
-        }
-        &::before{
-            content: "";
-            display: block;
-            padding-top: 100%;
-        }
-        @include tablet{
-            flex: 0 0 calc(45% - 1rem);
-        }
+    @include grid(2,1rem);
+    margin: auto;
+    button{
+        width: 60%;
+        margin: 1rem auto;
+        padding: 2rem;
     }
     @include tablet{
-        margin-top: 10rem;
-       justify-content: space-evenly; 
-       align-items: flex-start;
+        @include grid(5,1rem);
+        button{
+            width: 100%;
+            padding: 1rem;
+        }
     }
 }
 
+.descripciones{
+    border: 1px solid black;
+    margin: 4rem auto ;
+    
+    p{
+        text-align: center;
+        font-size: 1rem;
+        margin: 1rem;
+    }
+    @include tablet{
+        p{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+#requisitos{
+    @include grid(5,2rem);
+    h4{
+        grid-column: 1/6;
+    }
+}
+
+#compensaciones{
+    @include grid(4,2rem);
+    h4{
+        grid-column: 1/5;
+    }
+}
 
 .sombra{
     -webkit-box-shadow: 2px 12px 26px 8px rgba(0,0,0,0.20);
@@ -78,7 +52,3 @@
     box-shadow: 2px 12px 26px 8px rgba(0,0,0,0.20);
 }
 
-.texto-grafica{
-    // border: 1px solid black;
-    flex: 0 0 calc(50% - 1rem);
-}
