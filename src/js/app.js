@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded',function(){
 
 function iniciarApp(){
     obtenerBotones();
-    // draw();
 }
 
 function obtenerBotones(){
@@ -34,16 +33,27 @@ function obtenerBotones(){
 }
 
 function resetearAnimaciones(BaseAnimacion,animacion){
+    const nivel = document.querySelector('#nivel');
+    const tituloNivel = document.querySelector('#titulo-nivel');
     let requisitos = [];
     let compensaciones = [];
+    
     for (let i = 1; i <=5; i++) {
         requisitos[i]= document.querySelector('#req_'+i);
-        
+        requisitos[i].classList.remove(BaseAnimacion);
+        requisitos[i].classList.remove(animacion);
+        console.log("quito animaciones en req");
     }
-
     for (let i = 1; i <=4; i++) {
         compensaciones[i]= document.querySelector('#comp_'+i);
+        compensaciones[i].classList.remove(BaseAnimacion);
+        compensaciones[i].classList.remove(animacion);
+        console.log("quito animaciones en comp");
     }
+    nivel.classList.remove(BaseAnimacion);   
+    nivel.classList.remove(animacion); 
+    tituloNivel.classList.remove(BaseAnimacion);   
+    tituloNivel.classList.remove(animacion);  
 }
 
 
@@ -59,18 +69,19 @@ function llenarTexto(num){
     const animacion = "animate__zoomInRight";
 
     
-    resetearAnimaciones(BaseAnimacion,animacion);
 
     for (let i = 1; i <=5; i++) {
         requisitos[i]= document.querySelector('#req_'+i);
         requisitos[i].classList.add(BaseAnimacion);
         requisitos[i].classList.add(animacion);
+        console.log("agregando animaciones a req");
     }
 
     for (let i = 1; i <=4; i++) {
         compensaciones[i]= document.querySelector('#comp_'+i);
         compensaciones[i].classList.add(BaseAnimacion);
         compensaciones[i].classList.add(animacion);
+        console.log("agregando animaciones a comp");
     }
 
     premios.classList.add(BaseAnimacion);
@@ -377,4 +388,8 @@ function llenarTexto(num){
         default:
             break;
     }
+    
+    setTimeout(() => {
+        resetearAnimaciones(BaseAnimacion,animacion);
+    }, 1500);
 }

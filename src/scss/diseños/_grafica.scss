@@ -11,8 +11,9 @@
         background-color: $azul;
         color: $blanco;
         transition: all 0.2s ease-in-out 0.2s;
-        &:hover{
-            background-color: $gris;
+        &:hover,&:focus{
+            background-color: $verde;
+            color: black;
         }
     }
     @include tablet{
